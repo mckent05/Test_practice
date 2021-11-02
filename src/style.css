@@ -1,0 +1,232 @@
+@font-face {
+  font-family: "MyFont";
+  src: url("./my-font.woff2") format("woff2"), url("./my-font.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 100vw;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.main {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+
+.alert {
+  margin-top: 40px;
+  text-transform: capitalize;
+  font-size: 25px;
+  display: none;
+}
+
+.alert-success {
+  color: #0f0;
+  display: flex;
+}
+
+.alert-danger {
+  color: rgb(230, 54, 54);
+  display: flex;
+}
+
+.container {
+  display: flex;
+  margin: 2% auto;
+  flex-direction: column;
+  outline: 1px solid whitesmoke;
+  box-shadow: 2px 4px 6px rgb(114, 110, 110);
+  width: 70%;
+}
+
+.strike {
+  text-decoration: line-through;
+  font-style: italic;
+  color: grey;
+}
+
+.title-cont {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border-bottom: 1px solid grey;
+  margin-top: 10px;
+  padding: 10px;
+}
+
+.header-title {
+  display: flex;
+  text-align: center;
+  text-transform: capitalize;
+  order: 1;
+  position: relative;
+  width: 70%;
+  justify-content: flex-start;
+}
+
+.sync {
+  order: 2;
+}
+
+.inputdiv {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  order: 2;
+  column-gap: 10px;
+  align-items: center;
+  padding: 12px 10px;
+}
+
+.add-todo {
+  order: 1;
+  margin: 10px;
+  border: none;
+  outline: none;
+  width: 80%;
+  font-size: 20px;
+  font-style: italic;
+  padding: 8px 0;
+}
+
+.enter {
+  order: 2;
+  display: flex;
+  transform: scale(1.5);
+  color: #0f0;
+}
+
+.list-cont {
+  padding: 0;
+  list-style: none;
+  order: 3;
+  display: flex;
+  flex-direction: column;
+}
+
+.clr-todo {
+  order: 4;
+  border: none;
+  outline: none;
+  text-transform: capitalize;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 8px;
+  font-size: 20px;
+  color: grey;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.hide-btn {
+  display: none;
+}
+
+.clr-todo:hover {
+  text-decoration: underline;
+  color: black;
+}
+
+.to-do {
+  display: flex;
+  column-gap: 15px;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px;
+  border-top: 1px solid grey;
+  border-bottom: 1px solid grey;
+  width: 100%;
+}
+
+.check {
+  width: 10%;
+  order: 1;
+}
+
+.task {
+  width: 80%;
+  display: flex;
+  text-transform: capitalize;
+  font-size: 20px;
+  outline: none;
+  border: none;
+  background-color: inherit;
+  order: 2;
+  word-wrap: break-word;
+}
+
+.btn-cont {
+  width: 10%;
+  display: flex;
+  justify-content: flex-end;
+  order: 3;
+}
+
+.trash {
+  display: none;
+  color: rgba(245, 94, 94, 0.945);
+}
+
+.show-trash .trash {
+  display: flex;
+}
+
+.menu {
+  cursor: move;
+}
+
+.show-trash .menu {
+  display: none;
+}
+
+.to-do:nth-child(even) {
+  background-color: rgb(233, 220, 220);
+}
+
+.remove-edit .btn-cont {
+  display: none;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
+.info h2 {
+  color: lime;
+  text-align: center;
+  font-size: 35px;
+  text-transform: capitalize;
+  text-decoration: underline;
+  text-decoration-color: seagreen;
+}
+
+.info li {
+  margin: 10px;
+  text-transform: capitalize;
+  list-style-type: square;
+  font-size: 20px;
+}
+
+.drag {
+  border: 3px solid red;
+  opacity: 1;
+}
